@@ -92,11 +92,11 @@ By default, the library expects your MJML templates to be located in the `resour
 
 ### Injecting the Service
 
-To use the `mjml.mailer` library in your Spring application, first inject the `MjmlEmailService` by using the `@Autowired` annotation:
+To use the `mjml.mailer` library in your Spring application, first inject the `MjmlMailer` by using the `@Autowired` annotation:
 
 ```java
 @Autowired
-private MjmlEmailService mjmlEmailService;
+private MjmlMailer mjmlMailer;
 ```
 
 ### Sending MJML Emails
@@ -119,7 +119,7 @@ MjmlEmail mjmlEmail = MjmlEmail.builder()
                               .templateName("your-template-name.mjml")
                               .build();
 
-mjmlEmailService.send(mjmlEmail);
+mjmlMailer.send(mjmlEmail);
 ```
 
 2. **Without Parameters**:
@@ -133,7 +133,7 @@ MjmlEmail mjmlEmail = MjmlEmail.builder()
                               .templateName("your-template-name.mjml")
                               .build();
 
-mjmlEmailService.send(mjmlEmail);
+mjmlMailer.send(mjmlEmail);
 ```
 
 Replace placeholders like `recipient@example.com`, `Sample Subject`, `key`, `value`, and `your-template-name.mjml` with your actual values. Adjust the instructions as needed based on your specific use case.

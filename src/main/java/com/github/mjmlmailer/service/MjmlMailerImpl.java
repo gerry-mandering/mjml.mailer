@@ -16,11 +16,11 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 
 /**
- * Service implementation of the MjmlEmailService interface, responsible for sending MJML-based emails.
+ * Service implementation of the MjmlMailer interface, responsible for sending MJML-based emails.
  */
 @Service
 @RequiredArgsConstructor
-public class MjmlEmailServiceImpl implements MjmlEmailService {
+public class MjmlMailerImpl implements MjmlMailer {
 
     private final MjmlRequestBuilder mjmlRequestBuilder;
     private final MjmlConverter mjmlConverter;

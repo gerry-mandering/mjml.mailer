@@ -8,7 +8,7 @@ import java.io.IOException;
 /**
  * Interface defining the contract for MJML email-related services.
  */
-public interface MjmlEmailService {
+public interface MjmlMailer {
 
     /**
      * Sends an MJML email by converting MJML content to HTML and then sending the email.

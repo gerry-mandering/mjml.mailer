@@ -2,8 +2,8 @@ package com.github.mjmlmailer.config;
 
 import com.github.mjmlconverter.builder.MjmlRequestBuilder;
 import com.github.mjmlconverter.converter.MjmlConverter;
-import com.github.mjmlmailer.service.MjmlEmailService;
-import com.github.mjmlmailer.service.MjmlEmailServiceImpl;
+import com.github.mjmlmailer.service.MjmlMailer;
+import com.github.mjmlmailer.service.MjmlMailerImpl;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +18,7 @@ public class MjmlMailerAutoConfiguration {
 
     @Bean
     @ConditionalOnMissingBean
-    public MjmlEmailService mjmlEmailService(MjmlRequestBuilder mjmlRequestBuilder, MjmlConverter mjmlConverter, JavaMailSender mailSender) {
-        return new MjmlEmailServiceImpl(mjmlRequestBuilder, mjmlConverter, mailSender);
+    public MjmlMailer mjmlMailer(MjmlRequestBuilder mjmlRequestBuilder, MjmlConverter mjmlConverter, JavaMailSender mailSender) {
+        return new MjmlMailerImpl(mjmlRequestBuilder, mjmlConverter, mailSender);
     }
 }

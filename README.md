@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.gerry-mandering:mjml.mailer:1.0.0'
+    implementation 'com.github.gerry-mandering:mjml.mailer:1.0.1'
 }
 ```
 
@@ -43,7 +43,7 @@ Add the following to your `pom.xml`:
 <dependency>
     <groupId>com.github.gerry-mandering</groupId>
     <artifactId>mjml.mailer</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
